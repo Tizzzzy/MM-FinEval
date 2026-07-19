@@ -2,6 +2,32 @@
 
 This repository provides a foundational template for iterating over a structured multimodal dataset containing text transcripts, PDF slides, and audio files. It is designed to help you quickly load your data year-by-year, resolve the associated media file paths, and structure the data for your own custom processing pipelines
 
+## Data Release
+Due to the Github file size limit, we only pushed json files. Each json file contain data for each year, and have structure like:
+``` json
+{
+    "1633604": {
+        "input": "Operator: Good afternoon. My name is Devon, and I will be your conference operator today...",
+        "mp3_id": "552298740",
+        "ppt_id": "552686432",
+        "ret_eom": "0.026618000000000003",
+        "ret_ldm": "0.036500000000000005",
+        "ret_l5m": "0.026618000000000003",
+        "car": "0.0336699872",
+        "vol_past_3d": "0.8107419442260966",
+        "vol_fut_3d": "0.890294127038968",
+        "vol_past_7d": "0.6942851313841936",
+        "vol_fut_7d": "0.0537750836598825",
+        "vol_past_15d": "0.850547571815838",
+        "vol_fut_15d": "0.125181556062229",
+        "vol_past_30d": "0.8200977788987065",
+        "vol_fut_30d": "0.113651402551017"
+    },
+    ...
+}
+```
+The audio data folder and pdf data folder are in Google Drive.
+
 ## Usage Example
 Below is the boilerplate Python code. All Large Language Model (LLM) initialization, base64 encoding, and batching logic have been removed and replaced with placeholders so you can integrate your own tools seamlessly.
 
